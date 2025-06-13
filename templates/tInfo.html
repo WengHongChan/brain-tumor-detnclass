@@ -1,0 +1,101 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brain Tumor Detection and Classification System</title>
+    <!-- header -->
+    <!-- BootStrap 2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- External CSS -->
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+
+</head>
+
+<body style="height: 1200px">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">
+            <img src="static/image/btLogo.svg" width="30" height="30" alt="" class="d-inline-block align-top">
+            TUMORCare
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav" style="padding-left: 250px">
+                <a class="nav-item nav-link" href="/">Brain Tumor Detection and Classification</a>
+                <a class="nav-item nav-link" style="pointer-events: none; cursor:fault;">|</a>
+                <a class="nav-item nav-link" href="/locateTumorRegion">Locate Tumor Region</a>
+                <a class="nav-item nav-link" style="pointer-events: none; cursor:fault;">|</a>
+                <a class="nav-item nav-link active" href="/tumorInfo">Learn About Tumor <span class="sr-only">(current)</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" style ="width:450px; height:500px;" src="static/image/Glioma.gif" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 style="color: #e3f2fd;">Glioma Tumor</h5>
+                <p style="color: #e3f2fd;">Glioma in the left parietal lobe (brain CT scan), WHO grade 2.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" style ="width:450px; height:500px;" src="static/image/Meningioma.png" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Meningioma Tumor</h5>
+                <p>The tumor resting on the carotid artery and optic nerve of the patient.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" style ="width:450px; height:500px;" src="static/image/Pituitary.png" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Pituitary Tumor</h5>
+                <p>MRI images showing the normal pituitary gland (solid white arrow) and a pituitary tumor (dashed white arrow). The optic chiasm (where the optic nerves meet) is shown by the green arrows and is pushed up by the pituitary tumor.</p>
+            </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div class="container">
+        <div id="content" style="margin-top:2em">
+            <h2>What is Brain Tumor?</h2><br>
+            <p>A brain tumor is an abnormal mass or growth that develops within the brain or its surrounding structures. Tumors can be either benign (non-cancerous) or malignant (cancerous), and they can originate from brain cells or from cells that have spread from other parts of the body (metastatic tumors). Brain tumors can interfere with normal brain functions by putting pressure on nearby structures, causing neurological symptoms such as headaches, seizures, changes in behavior, and cognitive impairments. Treatment options for brain tumors depend on the type, size, and location of the tumor, and may include surgery, radiation therapy, chemotherapy, or a combination of these approaches. Early diagnosis and prompt treatment are crucial for better outcomes and to minimize potential complications.<br></p>
+            <h2>Types of Brain Tumor</h2><br>
+            <p><b>Glioma Tumor:</b> Glioma is a type of tumor that arises from glial cells, which are supportive cells that surround and nourish nerve cells in the brain and spinal cord. These tumors can be benign (non-cancerous) or malignant (cancerous). Malignant gliomas, such as glioblastoma multiforme, are the most aggressive and common form of brain tumors in adults. Gliomas are classified based on the specific type of glial cells involved and their location within the brain. Symptoms of gliomas vary depending on their size and location but may include headaches, seizures, cognitive deficits, and neurological impairments. Treatment options for gliomas often involve a combination of surgery, radiation therapy, and chemotherapy, but the prognosis can be challenging due to the aggressive nature of some gliomas.<br></p>
+            <p><b>Meningioma Tumor:</b> Meningioma is a type of brain tumor that originates in the meninges, which are the protective layers of tissue that cover the brain and spinal cord. These tumors are typically slow-growing and are more often benign than malignant. Meningiomas can occur in various locations within the skull and may cause symptoms when they press on adjacent brain structures. Common signs and symptoms include headaches, visual disturbances, seizures, and changes in behavior or personality. Treatment options for meningiomas depend on their size, location, and growth rate. While some small and asymptomatic meningiomas may be observed over time, others may require surgical removal or radiation therapy to alleviate symptoms and prevent further complications.<br></p>
+            <p><b>Pituitary Tumor:</b> Pituitary tumors are growths that develop in the pituitary gland, a small gland located at the base of the brain behind the eyes. These tumors can be non-functional (not producing hormones) or functional (producing hormones). Depending on their size and hormone-secreting capabilities, they can lead to hormonal imbalances, affecting various bodily functions. Common types of pituitary tumors include prolactinomas, growth hormone-secreting tumors (somatotropinomas), and adrenocorticotropic hormone-secreting tumors (Cushing's disease). Symptoms of pituitary tumors may include changes in vision, headaches, fatigue, and menstrual irregularities. Treatment options for pituitary tumors involve medications to control hormone levels, surgery to remove the tumor, or radiation therapy, depending on the specific case and tumor characteristics. Early detection and treatment can lead to positive outcomes for patients with pituitary tumors.<br></p>
+        </div>
+    </div>
+</body>
+
+<footer class="footer">
+    <center>
+        <a class="navbar-brand" href="/" style="padding-top:20px; color:black;">
+            <img src="static/image/btLogo.svg" width="30" height="30" alt="" class="d-inline-block align-top">
+            TUMORCare
+        </a>
+    </center>
+</footer>
+
+</html>

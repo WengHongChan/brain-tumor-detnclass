@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../CarPlate/.idea/CarPlate.iml" filepath="$PROJECT_DIR$/../CarPlate/.idea/CarPlate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/FYPpaidon.iml" filepath="$PROJECT_DIR$/.idea/FYPpaidon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ISE-1/.idea/ISE-1.iml" filepath="$PROJECT_DIR$/../ISE-1/.idea/ISE-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ISEAssignment/.idea/ISEAssignment.iml" filepath="$PROJECT_DIR$/../ISEAssignment/.idea/ISEAssignment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Image Segmentation/.idea/Image Segmentation.iml" filepath="$PROJECT_DIR$/../Image Segmentation/.idea/Image Segmentation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../jupiterTest/.idea/jupiterTest.iml" filepath="$PROJECT_DIR$/../jupiterTest/.idea/jupiterTest.iml" />
+    </modules>
+  </component>
+</project>

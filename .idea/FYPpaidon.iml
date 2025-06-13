@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="CarPlate" />
+    <orderEntry type="module" module-name="Image Segmentation" />
+    <orderEntry type="module" module-name="ISE-1" />
+    <orderEntry type="module" module-name="ISEAssignment" />
+    <orderEntry type="module" module-name="jupiterTest" />
+  </component>
+</module>
