@@ -50,14 +50,14 @@ Initial Hyperparameter used:
 Accuracy wise, VGG16 has the highest final validation accuracy of 83.42%, and then the second highest is EfficientNetB7 with 71.2%, the lowest being the proposed CNN model with just 35.08%. 
 But when it comes to the accuracy gathered from predicting the testing dataset, VGG16 experienced the highest drop in accuracy being 14.69%, with the final accuracy of 69% still it has the highest accuracy when compared to EfficientNetB7 (61%) and the proposed CNN model (39%).
 
-**Classification Report of the 3 Models as a Reference**<br>
+**<ins>Classification Report of the 3 Models as a Reference</ins>**<br><br>
 ![image](https://github.com/user-attachments/assets/acbda2bf-7838-4f95-988d-486fb180e84a)<br><br>
 
 ### 4.5 After Hyperparameter Tuning
-After the tuning of hyper-parameters, below is the optimum value of all the hyper-parameters for the 3 CNN models.<br>
+After the tuning of hyper-parameters, below is the optimum value of all the hyper-parameters for the 3 CNN models.<br><br>
 ![image](https://github.com/user-attachments/assets/80d7438f-70e1-4e6c-8582-fe75d16a1457)<br><br>
 
-CLassification Report of the 3 Models After Hyperparameter Tuning
+**<ins>Classification Report of the 3 Models After Hyperparameter Tuning</ins>**<br><br>
 ![image](https://github.com/user-attachments/assets/d773416d-162e-469f-abe9-d76338bd6e9c)<br><br>
 Compared to their initial accuracy, where EfficientNetB7 is 61%, VGG16 is 69%, and the proposed CNN model being 39%, the proposed CNN model has improved by 82.05% from 39% to 71%. However, it is still the lowest performing model where EfficientNetB7 comes in second with 72% accuracy, and the highest accuracy being achieved by VGG16, which is 74%. Therefore, VGG16 will be chosen as the model that will be used for the web application.
 
