@@ -41,13 +41,13 @@ The model used within the project would be a self-proposed CNN architecture, and
 ![image](https://github.com/user-attachments/assets/68101c0c-d122-418f-aba7-e7f84c224aed)<br><br>
 
 ### 4.4 Before Hyperparameter Tuning
-Initial Hyperparameter used:
-•	Optimizer: Adam
-•	Batch Size: 8
-•	Epoch: 4
-•	Dropout value: 0.1
+Initial Hyperparameter used:<br>
+•	Optimizer: Adam<br>
+•	Batch Size: 8<br>
+•	Epoch: 4<br>
+•	Dropout value: 0.1<br>
 <br>
-Accuracy wise, VGG16 has the highest final validation accuracy of 83.42%, and then the second highest is EfficientNetB7 with 71.2%, the lowest being the proposed CNN model with just 35.08%. 
+Each model is trained with the above value of hyperparemeter. Accuracy wise, VGG16 has the highest final validation accuracy of 83.42%, and then the second highest is EfficientNetB7 with 71.2%, the lowest being the proposed CNN model with just 35.08%.<br>
 But when it comes to the accuracy gathered from predicting the testing dataset, VGG16 experienced the highest drop in accuracy being 14.69%, with the final accuracy of 69% still it has the highest accuracy when compared to EfficientNetB7 (61%) and the proposed CNN model (39%).
 
 **<ins>Classification Report of the 3 Models as a Reference</ins>**<br><br>
